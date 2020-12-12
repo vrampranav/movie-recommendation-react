@@ -174,7 +174,9 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="title">MOVIENERD</h1>
-      <h3 className="tag">Binge Watch! 🍿 📺</h3>
+      <h3 className="tag">
+        Binge Watch!<span> 🍿 📺</span>
+      </h3>
       <p className="tag">Choose a Genre</p>
       <div className="genres">
         <ul>
