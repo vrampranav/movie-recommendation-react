@@ -37,7 +37,7 @@ const movieDictionary = {
       imgUrl:
         "https://m.media-amazon.com/images/M/MV5BMTMxNTMwODM0NF5BMl5BanBnXkFtZTcwODAyMTk2Mw@@._V1_UX67_CR0,0,67,98_AL_.jpg",
       movieUrl:
-        "https://www.amazon.com/Mountain-II-Caglar-Ertugrul/dp/B074T599M8"
+        "https://www.primevideo.com/detail/amzn1.dv.gti.c4b2f313-10cd-7644-696f-f1327ac44dba?ref=dvm_tt_wbr_pvs_piv&tag=imdbtag_tt_wbr_pvs_piv_in-21"
     }
   ],
   Thriller: [
@@ -113,7 +113,7 @@ const movieDictionary = {
       imgUrl:
         "https://m.media-amazon.com/images/M/MV5BN2EwM2I5OWMtMGQyMi00Zjg1LWJkNTctZTdjYTA4OGUwZjMyXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_UX67_CR0,0,67,98_AL_.jpg",
       movieUrl:
-        "https://www.primevideo.com/detail/amzn1.dv.gti.34b17cec-bc76-719d-001b-38f5c7cabde9?ref=dvm_tt_wbr_pvs_piv&tag=imdbtag_tt_wbr_pvs_piv_in-21"
+        "https://www.primevideo.com/detail/amzn1.dv.gti.12b1c5a7-e664-7465-afbc-74d5411c4a9b?ref=dvm_tt_wbr_pvs_piv&tag=imdbtag_tt_wbr_pvs_piv_in-21"
     }
   ],
   Comedy: [
@@ -142,7 +142,7 @@ const movieDictionary = {
     },
     {
       id: 12,
-      title: "Pokémon Detective Pikachu (2019)",
+      title: "Pokemon Detective Pikachu (2019)",
       rating: "⭐ 7.6",
       availbleOn: "Amazon Prime",
       genre: "Comedy",
@@ -158,7 +158,9 @@ const genreList = ["Action", "Thriller", "Sci-Fi", "Comedy"];
 
 export default function App() {
   let [movieData, setGenre] = useState([]);
-  let [msg, setMsg] = useState("Our Suggestions can be seen here!");
+  let [msg, setMsg] = useState(
+    "Our Suggestions can be seen here! Pick a genre"
+  );
   //console.log(movieData);
 
   //Genre Click Handler
@@ -171,8 +173,8 @@ export default function App() {
   }
   return (
     <div className="App">
-      <h1 className="title">MR</h1>
-      <h2 className="tag">Binge Watch!</h2>
+      <h1 className="title">MOVIENERD</h1>
+      <h3 className="tag">Binge Watch! 🍿 📺</h3>
       <p className="tag">Choose a Genre</p>
       <div className="genres">
         <ul>
@@ -204,10 +206,10 @@ export default function App() {
                   </div>
                   <div className="movieDesc">
                     <h4>{movie.title}</h4>
-                    <small key={movie.duration}>
+                    <small className="tag">
                       {movie.rating} | {movie.genre} | {movie.duration}
                     </small>
-                    <p>
+                    <p className="tag">
                       <small>Available on : {movie.availbleOn}</small>
                     </p>
                     <p>
