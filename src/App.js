@@ -155,7 +155,6 @@ const movieDictionary = {
   ]
 };
 const genreList = ["Action", "Thriller", "Sci-Fi", "Comedy"];
-
 export default function App() {
   let [movieData, setGenre] = useState([]);
   let [msg, setMsg] = useState(
@@ -174,9 +173,7 @@ export default function App() {
   return (
     <div className="App">
       <h1 className="title">MOVIENERD</h1>
-      <h3 className="tag">
-        Binge Watch!<span> 🍿 📺</span>
-      </h3>
+      <h3 className="tag">Binge Watch!</h3>
       <p className="tag">Choose a Genre</p>
       <div className="genres">
         <ul>
